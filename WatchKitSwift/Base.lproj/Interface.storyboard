@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="9531" systemVersion="15B42" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="9515"/>
+    </dependencies>
+    <scenes>
+        <!--News-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller title="News" id="AgC-eL-Hgc" customClass="InterfaceController" customModule="WatchKitSwift" customModuleProvider="target">
+                    <items>
+                        <table alignment="left" id="w2M-Ne-pkB">
+                            <items>
+                                <tableRow identifier="feedsRowController" id="BZc-h1-Ui8" customClass="FeedsTableRow" customModule="WatchKitSwift_Extension">
+                                    <group key="rootItem" width="1" height="0.0" alignment="left" id="tQ2-g2-iep">
+                                        <items>
+                                            <imageView width="35" height="35" alignment="left" verticalAlignment="center" image="PAG" contentMode="scaleAspectFill" id="oXO-ls-X3B">
+                                                <variation key="device=watch42mm" height="35" width="35"/>
+                                            </imageView>
+                                            <label width="92" alignment="left" text="Label" textAlignment="right" numberOfLines="4" minimumScaleFactor="0.5" id="8YK-1y-kxU">
+                                                <fontDescription key="font" style="UICTFontTextStyleSubhead"/>
+                                            </label>
+                                        </items>
+                                    </group>
+                                    <connections>
+                                        <outlet property="feedImage" destination="oXO-ls-X3B" id="IRu-qt-3IH"/>
+                                        <outlet property="feedTitle" destination="8YK-1y-kxU" id="SpX-XV-1uk"/>
+                                    </connections>
+                                </tableRow>
+                            </items>
+                        </table>
+                    </items>
+                    <connections>
+                        <outlet property="newsTable" destination="w2M-Ne-pkB" id="UfY-eu-JhU"/>
+                        <segue destination="ngy-mQ-rdZ" kind="relationship" relationship="nextPage" id="Rru-bk-gBt"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="-67" y="303"/>
+        </scene>
+        <!--Blog-->
+        <scene sceneID="PDb-5I-wca">
+            <objects>
+                <controller title="Blog" id="ngy-mQ-rdZ" customClass="BlogInterfaceController" customModule="WatchKitSwift_Extension">
+                    <items>
+                        <table alignment="left" id="g2c-Bc-XsM">
+                            <items>
+                                <tableRow identifier="feedsRowController" id="weS-j4-Hg7" customClass="FeedsTableRow" customModule="WatchKitSwift_Extension">
+                                    <group key="rootItem" width="1" height="0.0" alignment="left" id="xvw-Qk-2EA">
+                                        <items>
+                                            <imageView width="35" height="35" alignment="left" verticalAlignment="center" image="images" contentMode="scaleAspectFill" id="gxJ-xN-j0F"/>
+                                            <label width="92" alignment="left" text="Label" textAlignment="right" numberOfLines="4" minimumScaleFactor="0.5" id="RGm-xG-Rmq">
+                                                <fontDescription key="font" style="UICTFontTextStyleSubhead"/>
+                                            </label>
+                                        </items>
+                                    </group>
+                                    <connections>
+                                        <outlet property="feedImage" destination="gxJ-xN-j0F" id="PbW-Gl-bvS"/>
+                                        <outlet property="feedTitle" destination="RGm-xG-Rmq" id="cTY-FV-vxA"/>
+                                    </connections>
+                                </tableRow>
+                            </items>
+                        </table>
+                    </items>
+                    <connections>
+                        <outlet property="blogTable" destination="g2c-Bc-XsM" id="Hdz-lE-HHU"/>
+                        <segue destination="1pu-oe-1Kk" kind="relationship" relationship="nextPage" id="0gh-7i-UZW"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="168" y="303"/>
+        </scene>
+        <!--Featured Jobs-->
+        <scene sceneID="ljc-ZW-bOb">
+            <objects>
+                <controller title="Featured Jobs" id="1pu-oe-1Kk">
+                    <items>
+                        <table alignment="left" id="yyI-vb-OW0">
+                            <items>
+                                <tableRow identifier="feedsRowController" id="DDZ-gq-6Tf">
+                                    <group key="rootItem" width="1" alignment="left" id="eXl-g2-7ew"/>
+                                </tableRow>
+                            </items>
+                        </table>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="408" y="303"/>
+        </scene>
+        <!--FeedDetailedView-->
+        <scene sceneID="r2T-7r-Gob">
+            <objects>
+                <controller identifier="FeedDetailedView" id="Eff-2Z-WHr" customClass="MainInterfaceController" customModule="WatchKitSwift_Extension">
+                    <items>
+                        <label width="125" alignment="center" text="Label" textAlignment="left" numberOfLines="4" id="YDy-4U-B65">
+                            <fontDescription key="font" style="UICTFontTextStyleHeadline"/>
+                        </label>
+                        <separator alignment="left" id="zza-Lr-PVP"/>
+                        <dateLabel width="80" alignment="right" textAlignment="right" id="LmB-Pz-N0i">
+                            <fontDescription key="font" style="UICTFontTextStyleFootnote"/>
+                            <dateFormatterStyle key="dateStyle" medium="YES"/>
+                        </dateLabel>
+                        <separator alignment="left" id="aAx-Hs-p3V"/>
+                        <imageView width="1" alignment="center" image="images" contentMode="scaleAspectFit" id="naw-OO-2on"/>
+                        <separator alignment="left" id="57S-rD-Nar"/>
+                        <label width="125" alignment="center" textAlignment="left" numberOfLines="0" id="pbR-di-w4d">
+                            <mutableString key="text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam; est usus legentis in iis qui facit eorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum formas humanitatis per seacula quarta decima et quinta decima. Eodem modo typi, qui nunc nobis videntur parum clari, fiant sollemnes in futurum.</mutableString>
+                            <fontDescription key="font" style="UICTFontTextStyleCaption2"/>
+                        </label>
+                    </items>
+                    <connections>
+                        <outlet property="feedDate" destination="LmB-Pz-N0i" id="81w-yf-CgN"/>
+                        <outlet property="feedImage" destination="naw-OO-2on" id="wFS-sP-ghy"/>
+                        <outlet property="feedTitle" destination="YDy-4U-B65" id="1er-Bf-Ndo"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="408" y="1262.25"/>
+        </scene>
+        <!--Static Notification Interface Controller-->
+        <scene sceneID="AEw-b0-oYE">
+            <objects>
+                <notificationController id="YCC-NB-fut">
+                    <items>
+                        <label alignment="left" text="Alert Label" id="IdU-wH-bcW"/>
+                    </items>
+                    <notificationCategory key="notificationCategory" identifier="myCategory" id="JfB-70-Muf"/>
+                    <connections>
+                        <outlet property="notificationAlertLabel" destination="IdU-wH-bcW" id="JKC-fr-R95"/>
+                        <segue destination="4sK-HA-Art" kind="relationship" relationship="dynamicNotificationInterface" id="kXh-Jw-8B1"/>
+                    </connections>
+                </notificationController>
+            </objects>
+            <point key="canvasLocation" x="-205" y="903"/>
+        </scene>
+        <!--Notification Controller-->
+        <scene sceneID="ZPc-GJ-vnh">
+            <objects>
+                <controller id="4sK-HA-Art" customClass="NotificationController" customModule="WatchKitSwift" customModuleProvider="target">
+                    <items>
+                        <imageView width="136" height="60" alignment="left" image="images" contentMode="scaleAspectFill" id="u4g-Lb-OSJ"/>
+                        <label width="136" alignment="left" text="Label" numberOfLines="0" id="gWZ-pv-uhu" userLabel="AlertLabel"/>
+                    </items>
+                    <connections>
+                        <outlet property="notificationImage" destination="u4g-Lb-OSJ" id="8FI-jR-yCp"/>
+                        <outlet property="testLabel" destination="gWZ-pv-uhu" id="s1H-c6-qIY"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="56" y="903"/>
+        </scene>
+    </scenes>
+</document>

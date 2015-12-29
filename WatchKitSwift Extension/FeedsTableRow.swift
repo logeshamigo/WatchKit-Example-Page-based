@@ -9,5 +9,6 @@
 import WatchKit
 
 class FeedsTableRow: NSObject {
-
+    @IBOutlet var feedImage: WKInterfaceImage!
+    @IBOutlet var feedTitle: WKInterfaceLabel!
 }

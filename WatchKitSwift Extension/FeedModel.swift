@@ -9,5 +9,15 @@
 import WatchKit
 
 class FeedModel: NSObject {
-
+    
+    var feedTitle: String = ""
+    var feedImage: String = ""
+    var feedDescription: String = ""
+    
+    init?(feedTitle: String, feedImage: String, feedDescription: String) {
+        
+        self.feedTitle = feedTitle
+        self.feedImage = feedImage
+        self.feedDescription = feedDescription
+    }
 }
