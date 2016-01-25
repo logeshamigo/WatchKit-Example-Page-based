@@ -38,7 +38,7 @@
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="-67" y="303"/>
+            <point key="canvasLocation" x="-59" y="298"/>
         </scene>
         <!--Blog-->
         <scene sceneID="PDb-5I-wca">
@@ -50,7 +50,7 @@
                                 <tableRow identifier="feedsRowController" id="weS-j4-Hg7" customClass="FeedsTableRow" customModule="WatchKitSwift_Extension">
                                     <group key="rootItem" width="1" height="0.0" alignment="left" id="xvw-Qk-2EA">
                                         <items>
-                                            <imageView width="35" height="35" alignment="left" verticalAlignment="center" image="images" contentMode="scaleAspectFill" id="gxJ-xN-j0F"/>
+                                            <imageView width="35" height="35" alignment="left" image="images" contentMode="scaleAspectFill" id="gxJ-xN-j0F"/>
                                             <label width="92" alignment="left" text="Label" textAlignment="right" numberOfLines="4" minimumScaleFactor="0.5" id="RGm-xG-Rmq">
                                                 <fontDescription key="font" style="UICTFontTextStyleSubhead"/>
                                                 <variation key="device=watch38mm" width="82"/>
